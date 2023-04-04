@@ -70,7 +70,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(rgba(1, 0, 0, .5), rgba(1, 0, 0, .5)), url(/images/Ne-Obliviscaris-2022.jpg);
+    background-image: linear-gradient(rgba(1, 0, 0, .5), rgba(1, 0, 0, .5)), url(images/Ne-Obliviscaris-2022.jpg);
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
