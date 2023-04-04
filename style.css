@@ -1,0 +1,216 @@
+/* * {
+    border: 1px solid red;
+} */
+
+html,
+body {
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.navbar {
+    /* size of icons */
+    --icon_size: 25px;
+
+    /* gap size of the icons */
+    --icon_gap_size: 20px;
+
+    width: auto;
+    height: 72px;
+    display: flex;
+    background-color: black;
+
+    /* keeping navbar in the viewport */
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+}
+
+.home-logo {
+    display: flex;
+    min-width: 72px;
+    min-height: 72px;
+
+    margin-left: 8px;
+}
+
+.home-logo img {
+    /* contain img within div */
+    width: 100%;
+    height: 100%;
+}
+
+.socials-container {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: 25px;
+    gap: var(--icon_gap_size);
+}
+
+.socials-container i {
+    font-size: var(--icon_size);
+    transition: transform 0.4s ease-out;
+}
+
+.socials-container i:hover {
+    transform: scale(1.15);
+    transition: transform 0.1s;
+}
+
+.socials-container div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-container {
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(1, 0, 0, .5), rgba(1, 0, 0, .5)), url(/images/Ne-Obliviscaris-2022.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.about-container {
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    flex-direction: row;
+    background-color: black;
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 350px;
+    margin: 20px;
+    padding: 15px;
+
+    /* thickness of the border */
+    --b: 1px;
+    /* color of the border */
+    --c: white;
+    /* width of border */
+    --w: 10px;
+
+
+    border: var(--b) solid #0000;
+    /* space for the border */
+    --_g: #0000 90deg, var(--c) 0;
+    --_p: var(--w) var(--w) border-box no-repeat;
+    background:
+        conic-gradient(from 90deg at top var(--b) left var(--b), var(--_g)) 0 0 / var(--_p),
+        conic-gradient(from 180deg at top var(--b) right var(--b), var(--_g)) 100% 0 / var(--_p),
+        conic-gradient(from 0deg at bottom var(--b) left var(--b), var(--_g)) 0 100% / var(--_p),
+        conic-gradient(from -90deg at bottom var(--b) right var(--b), var(--_g)) 100% 100% / var(--_p);
+}
+
+.about-text span {
+    color: white;
+    font-size: 28px;
+    font-family: 'Sora', sans-serif;
+}
+
+.about-text p {
+    color: white;
+    font-size: 18px;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: justify;
+}
+
+.about-image {
+    display: flex;
+    margin: 50px;
+}
+
+.about-image img {
+    border-radius: 20px;
+}
+
+.albums {
+    height: 100px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Sora', sans-serif;
+}
+
+.albums span {
+    font-size: 56px;
+    color: white;
+}
+
+.songs-container {
+    --s: 420px;
+    /* size of grid */
+    --as: .7s;
+    /* animation speed */
+
+    display: grid;
+    width: auto;
+    grid-auto-flow: column;
+    background-color: black;
+    overflow: hidden;
+}
+
+.songs-container>div {
+    width: 0px;
+    min-width: calc(100%);
+    height: var(--s);
+    cursor: pointer;
+    transition: var(--as);
+}
+
+.songs-container>:hover {
+    width: calc(var(--s)/4);
+}
+
+.item {
+    position: relative;
+}
+
+.item img {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background-color: black;
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+    text-align: center;
+    padding-top: 30%;
+}
+
+.overlay span {
+    font-size: 56px;
+    font-family: 'Forum', cursive;
+    margin: 0px;
+}
+
+.overlay p {
+    font-size: 32px;
+    font-family: 'Forum', cursive;
+    margin: 0px;
+}
+
+.item:hover .overlay {
+    opacity: .8;
+}
